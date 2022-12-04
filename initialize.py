@@ -22,7 +22,7 @@ def ensure_dir(name: str | os.PathLike) -> None:
 
 
 for day_no in range(1, 26):
-    folder_name = f'day_{day_no}'
+    folder_name = f'day_{day_no:02d}'
     folder_path = os.path.join(BASE_DIR, folder_name)
 
     ensure_dir(folder_path)
