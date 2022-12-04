@@ -1,4 +1,18 @@
-with open("day_4/resources/input_1.txt") as fptr:
+with open("day_4/resources/input_2.txt") as fptr:
     input_ = list(line.strip() for line in fptr.readlines())
 
-print(input_)
+
+def does_overlap(range_one: tuple, range_two: tuple):
+    return range_one[0] <= range_two[0] <= range_one[1] or range_one[0] <= range_two[1] <= range_one[1]
+
+overlap_counter = 0
+for line in input_:
+    line_split = line.split(',')
+
+    range_one = tuple(int(elem) for elem in line_split[0].split('-'))
+    range_two = tuple(int(elem) for elem in line_split[1].split('-'))
+
+    if does_overlap(range_one, range_two) or does_overlap(range_two, range_one):
+        overlap_counter += 1
+print(overlap_counter)
+
