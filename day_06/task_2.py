@@ -1,7 +1,7 @@
 with open("day_06/resources/input_2.txt") as fptr:
     input_ = list(line.strip() for line in fptr.readlines())
 
-BUF_SIZE = 4
+BUF_SIZE = 14
 for line in input_:
     buf = []
     for i in range(len(line) - BUF_SIZE-1):
