@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-with open("day_3/resources/input_2.txt") as fptr:
+with open("day_03/resources/input_2.txt") as fptr:
     input_ = list(line.strip() for line in fptr.readlines())
 
     groups = []

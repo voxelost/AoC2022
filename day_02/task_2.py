@@ -1,4 +1,4 @@
-with open("day_2/resources/input_2.txt") as fptr:
+with open("day_02/resources/input_2.txt") as fptr:
     input_ = list(line.strip().split(' ') for line in fptr.readlines())
 
 
